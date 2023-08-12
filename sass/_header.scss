@@ -1,0 +1,57 @@
+@import 'mixins';
+
+header {
+    @extend %TheWholeSpace;
+
+    //? Grid Styles for parent
+    grid-column: 2 / 3;
+    
+    //? Grid self
+    @include Grid(17% 45% 45%);
+    grid-row-start: 2;
+    padding-bottom: 40px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    
+
+
+    //! CHILDS 
+
+    h1 {
+        //? Grid Styles for parent
+        grid-column: 1 / 2;
+        @extend %TheWholeSpace;
+
+        //? Grid self
+        @include selfPosition(center,center);
+
+        //? Custom Style
+        font-size: 35px;
+        font-family: "Bold";
+        padding: 3px;
+    }
+
+    ul {
+        //? Grid Styles for parent
+        grid-column: 2 / 3;
+        @extend %TheWholeSpace;
+
+        //? Flex self
+        display: flex;
+        @include parentPosition(space-evenly,center);
+
+        //? Custom Style
+        font-size: 18px;
+        padding-top: 0;
+        vertical-align: center;
+
+        li{
+             //? Custom Style
+             padding: 7px;
+             padding-bottom: 0;
+             font-family: "Thin";
+             font-weight: bold;
+        }
+    }
+
+
+}
