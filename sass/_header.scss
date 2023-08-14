@@ -1,57 +1,81 @@
-@import 'mixins';
-
 header {
-    @extend %TheWholeSpace;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap : 1rem;
 
-    //? Grid Styles for parent
-    grid-column: 2 / 3;
-    
-    //? Grid self
-    @include Grid(17% 45% 45%);
-    grid-row-start: 2;
-    padding-bottom: 40px;
-    border-bottom: 1px solid hsl(220, 14%, 75%);
-    
-
-
-    //! CHILDS 
-
+    border-bottom: 0.009rem solid hsl(220, 14%, 75%);
     h1 {
-        //? Grid Styles for parent
-        grid-column: 1 / 2;
-        @extend %TheWholeSpace;
-
-        //? Grid self
-        @include selfPosition(center,center);
-
-        //? Custom Style
-        font-size: 35px;
+        width: 100%;
+        flex: 1 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         font-family: "Bold";
-        padding: 3px;
+        font-size: 2.5rem;
+        padding-bottom: 0.6rem;
+        cursor: pointer;
     }
 
     ul {
-        //? Grid Styles for parent
-        grid-column: 2 / 3;
-        @extend %TheWholeSpace;
-
-        //? Flex self
+        flex : 3 1;
         display: flex;
-        @include parentPosition(space-evenly,center);
-
-        //? Custom Style
-        font-size: 18px;
-        padding-top: 0;
-        vertical-align: center;
-
-        li{
-             //? Custom Style
-             padding: 7px;
-             padding-bottom: 0;
-             font-family: "Thin";
-             font-weight: bold;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 1rem;
+        li {
+            font-size: 1rem;
+            font-family: "Thin";
+            font-weight: 400px;
+            cursor: pointer;
         }
     }
 
+    .avatar {
+        flex : 0.5 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: center;
+        
 
+        i {
+            font-size: 1.8rem;
+            position: relative;
+            cursor: pointer;
+
+            p {
+                font-size: 0.8rem;
+                position: absolute;
+                top: -5px;
+                right: -4px;
+                z-index: 2;
+                color: hsl(0, 0%, 100%);
+                background-color: hsl(26, 100%, 55%);
+                width:1rem;
+                height: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100% ;
+                -webkit-border-radius: 100% ;
+                -moz-border-radius: 100% ;
+                -ms-border-radius: 100% ;
+                -o-border-radius: 100% ;
+            }
+        }
+
+        img {
+            display: flex;
+            max-width: 3.5rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
+

@@ -1,5 +1,136 @@
 .main-content {
-    @extend %TheWholeSpace;
-    grid-column: 2 / 3;
-    grid-row-start: 3;
+    display: flex;
+    padding: 5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 6rem;
+
+    .left {
+        flex: 1 1;
+        .img-show{
+            img{
+                max-width: 100%;
+                border-radius: 1rem;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                -ms-border-radius: 1rem;
+                -o-border-radius: 1rem;
+
+                }   
+        }
+
+        .img-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem 0;
+            gap: 0.4rem;
+            img {
+                max-width: 23.9%;
+                flex: 1 1;
+                border-radius: 1rem;
+            }
+        }
+    }
+
+    .right {
+        flex: 1 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .description{
+            flex : 3 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            h4 {
+                flex : 2 1;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                font-size: 0.9rem;
+                letter-spacing: 0.1rem;
+                font-family: 'Bold';
+                color : hsl(26, 100%, 55%);
+            }
+            h2{
+                flex : 1 1;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                font-size: 2.5rem;
+                font-weight: 700px;
+                font-family: 'Bold';
+                padding: 0.5rem 0;
+            }
+            p{
+                flex : 2 1;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                line-height: 1.5;
+                font-size: 1rem;
+                font-family: 'Regular';
+                font-weight: 700px;
+                color: hsl(220, 14%, 75%);
+                padding-top: 1rem 0;
+            }
+        }
+        .price{
+            flex : 1.5 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-top: 5rem;
+            .off-price{
+                display: flex;
+                .second-price {
+                    flex : 0.5 1;
+                    font-size: 2rem;
+                    font-family: "Bold";
+                    .dollar{
+                        font-family: "Bold";
+                    }
+                }
+
+                .off{
+                    flex: 1 1;
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        background-color: hsl(25, 100%, 94%);
+                        width: 13%;
+                        padding: 0.3rem;
+                        border-radius: 0.4rem;
+                        -webkit-border-radius: 0.4rem;
+                        -moz-border-radius: 0.4rem;
+                        -ms-border-radius: 0.4rem;
+                        -o-border-radius: 0.4rem;
+                        color: hsl(26, 100%, 55%);
+                        font-family: "Bold";
+                    }
+                }
+            }
+            .first-price {
+                font-size: 1.3rem;
+                font-family: "Bold";
+                text-decoration:line-through;
+                .dollar{
+                    font-family: "Bold";
+                }
+                color: hsl(220, 14%, 75%);
+            }
+
+        }
+
+        .add-to-card{
+            flex : 1.5 1;
+            width: 100%;
+        }
+    }
 }
