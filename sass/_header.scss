@@ -36,28 +36,24 @@ header {
     }
 
     .avatar {
-        flex : 0.5 1;
+        flex: 0.5 1 ;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        vertical-align: center;
-        
-
-        i {
-            font-size: 1.8rem;
+        .cart{
+            flex : 0.7 1;
             position: relative;
             cursor: pointer;
-
             p {
                 font-size: 0.8rem;
                 position: absolute;
                 top: -5px;
-                right: -4px;
+                right: 22px;
                 z-index: 2;
                 color: hsl(0, 0%, 100%);
                 background-color: hsl(26, 100%, 55%);
-                width:1rem;
-                height: 1rem;
+                width: 1.01rem;
+                height: 1.01rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -68,14 +64,14 @@ header {
                 -o-border-radius: 100% ;
             }
         }
-
-        img {
+        img{
             display: flex;
             max-width: 3.5rem;
             &:hover {
                 cursor: pointer;
             }
         }
+
     }
 }
 
